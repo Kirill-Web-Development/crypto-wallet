@@ -1,0 +1,11 @@
+@use '../abstracts'
+@use '../components/_media'
+@use '../layout/_tablet'
+
+html,body
+    height: 100%
+body
+    position: relative
+    background: url(../../assets/img/backgrounds/bg-lines.png)left top/cover no-repeat, abstracts.$c-primary-color
+    @media (max-width: 1499px)
+        background: url(../../assets/img/backgrounds/bg-lines.png)left top no-repeat, abstracts.$c-primary-color

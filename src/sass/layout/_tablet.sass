@@ -1,0 +1,67 @@
+@use '../base'
+@use '../abstracts'
+
+.tablet
+    @extend %absolute-pos-centered
+    @include abstracts.mix-round-shape (80vw, 90vh, 50px)
+    background-color: abstracts.$c-wallet-color
+    display: flex
+    padding: 15px
+    font-family:  'Poppins', sans-serif
+
+.tablet__nav-bar
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    align-items: center
+    padding: 15px 34px 60px 0px
+
+.tablet__logo
+    position: relative
+    width: 74px
+    height: 74px
+    background: #F6F0D8
+    border-radius: 23px
+    flex-shrink: 0
+    &-img
+        @extend %absolute-pos-centered
+    & a
+        display: block
+        width: 100%
+        height: 100%
+
+.tablet__menu
+    margin-top: min(4vh, 20px)
+    margin-bottom: min(14vh, 81px) 
+.menu-list__item:not(:last-child)
+    margin-bottom: min(4vh, 40px)
+
+.dash
+    @include abstracts.mix-round-shape (auto, auto,  50px)
+    flex: 1 1 auto
+    background-color: #fff
+    padding-top: min(2.5vh,26px)
+    padding-right: min(3.5vw,60px)
+    padding-bottom: min(3.5vh,60px)
+    padding-left: min(3.5vw,66px)
+
+.dash__header
+    display: flex
+    justify-content: space-between
+
+.dash__title
+    margin-top: 10px
+    h1
+        font-weight: 700
+        font-size: 35px
+        letter-spacing: 0.02em
+        margin: 0
+
+.dash__controls
+    > *:not(:last-child)
+        margin-right: 16px
+
+.search
+    @include abstracts.mix-round-shape (48px, 48px, 50%)
+    background-color: abstracts.$c-controls-color
